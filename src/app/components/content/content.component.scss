@@ -1,0 +1,53 @@
+.category {
+  margin-top: 40px;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+hr {
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #d0d0d0;
+}
+
+.drink-list {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  justify-content: space-between;
+  grid-row-gap: 50px;
+  text-align: center;
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .drink-list {
+    grid-template-columns: repeat(4, 150px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .drink-list {
+    grid-template-columns: repeat(3, 150px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .drink-list {
+    grid-template-columns: repeat(2, 150px);
+  }
+}

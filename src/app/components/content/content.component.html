@@ -1,0 +1,13 @@
+<app-spinner *ngIf="!drinks"></app-spinner>
+<app-infinite-scroll *ngIf="drinks" (scrolled)="onScrollDown()">
+  <div class="category" *ngFor="let drinkCategory of drinks">
+    <h2 class="text-primary category-title">{{drinkCategory.value}}</h2>
+    <hr/>
+    <div class="drink-list">
+      <div class="card" *ngFor="let drink of drinkCategory.drinkList">
+        <img class="card-img" [src]="drink.strDrinkThumb" [alt]="drink.strDrink">
+        <h2 class="card-title">{{drink.strDrink}}</h2>
+      </div>
+    </div>
+  </div>
+</app-infinite-scroll>

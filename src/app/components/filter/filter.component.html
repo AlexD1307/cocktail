@@ -1,0 +1,10 @@
+<div class="container">
+  <label class="category-item" *ngFor="let category of categories">
+    <span class="custom-checkbox">
+      <span [style.display]="category.active ? 'block' : 'none'" class="checkmark"></span>
+    </span>
+    <input class="checkbox" type="checkbox" (change)="filterCategory(category.value)" checked>
+    <span class="text-primary">{{category.value}}</span>
+  </label>
+  <button class="btn-apply" (click)="applyFilter()">APPLY</button>
+</div>

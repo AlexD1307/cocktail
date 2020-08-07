@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ContentComponent,
+    FilterComponent,
+    SpinnerComponent,
+    InfiniteScrollComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
